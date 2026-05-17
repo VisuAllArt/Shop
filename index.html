@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
   <meta charset="UTF-8">
@@ -18,26 +19,67 @@
 
 <body>
 
+<!-- PARTICLES -->
+
 <div class="particles"></div>
 
 <!-- HEADER -->
 
 <header>
 
-  <div class="logo">VisuAll</div>
+  <div class="logo">
+    VisuAll
+  </div>
 
   <nav>
+
     <a href="#services">Serviços</a>
+
     <a href="#prices">Preços</a>
+
     <a href="#portfolio">Portfólio</a>
-    <a href="#shop">Carrinho</a>
+
+    <a href="#shop">Projetos</a>
+
   </nav>
 
-  <a href="https://wa.me/5514981775443" class="btn">
-    Orçamento
+  <a href="https://wa.me/5514981775443"
+  class="header-btn">
+
+    Contato
+
   </a>
 
 </header>
+
+<!-- CARRINHO FIXO -->
+
+<div class="cart-floating">
+
+  <h2>
+    Seu Carrinho
+  </h2>
+
+  <div id="cart-items"></div>
+
+  <div class="cart-total">
+
+    <span>Total</span>
+
+    <span>
+      R$<span id="cart-total">0</span>
+    </span>
+
+  </div>
+
+  <button class="checkout-btn"
+  onclick="finalizarPedido()">
+
+    Finalizar no WhatsApp
+
+  </button>
+
+</div>
 
 <!-- HERO -->
 
@@ -45,27 +87,41 @@
 
   <div class="hero-content">
 
-    <div class="badge">
-      Agência Criativa Digital
+    <div class="hero-badge">
+
+      Agência criativa digital premium
+
     </div>
 
     <h1>
-      Sua marca merece
-      <span class="gradient">ser vista.</span>
+
+      Transformamos ideias em
+      experiências visuais incríveis.
+
     </h1>
 
     <p>
-      Design premium, marketing digital e restaurações profissionais para elevar sua marca.
+
+      Sites modernos, gerenciamento de Instagram,
+      branding premium e restauração profissional
+      de imagens.
+
     </p>
 
-    <div class="buttons">
+    <div class="hero-buttons">
 
-      <a href="#shop" class="btn">
-        Solicitar Projeto
+      <a href="#shop"
+      class="main-btn">
+
+        Ver Serviços
+
       </a>
 
-      <a href="#portfolio" class="btn-secondary">
-        Ver Portfólio
+      <a href="https://wa.me/5514981775443"
+      class="secondary-btn">
+
+        Solicitar Orçamento
+
       </a>
 
     </div>
@@ -79,64 +135,108 @@
 <section id="services">
 
   <div class="section-title">
+
     <span>SERVIÇOS</span>
-    <h2>O que fazemos</h2>
+
+    <h2>
+      O que fazemos
+    </h2>
+
   </div>
 
-  <div class="services">
+  <div class="services-grid">
 
-    <div class="card">
+    <!-- SOCIAL -->
 
-      <div class="icon instagram-icon">
+    <div class="service-card">
+
+      <div class="service-icon">
+
         <i class="fab fa-instagram"></i>
+
       </div>
 
-      <h3>Social Media</h3>
+      <h3>
+        Social Media
+      </h3>
 
       <p>
-        Gestão profissional de Instagram, branding e crescimento digital.
+
+        Gestão profissional de Instagram,
+        crescimento estratégico e branding
+        moderno.
+
       </p>
 
     </div>
 
-    <div class="card">
+    <!-- MARKETING -->
 
-      <div class="icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+    <div class="service-card">
+
+      <div class="service-icon">
+
+        <i class="fas fa-chart-line"></i>
+
       </div>
 
-      <h3>Marketing Digital</h3>
+      <h3>
+        Marketing Digital
+      </h3>
 
       <p>
-        Estratégias inteligentes para posicionar sua marca online.
+
+        Estratégias inteligentes para
+        aumentar presença online e
+        conversões.
+
       </p>
 
     </div>
 
-    <div class="card">
+    <!-- FOTO -->
 
-      <div class="icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png">
+    <div class="service-card">
+
+      <div class="service-icon">
+
+        <i class="fas fa-camera"></i>
+
       </div>
 
-      <h3>Photo Reworks</h3>
+      <h3>
+        Photo Reworks
+      </h3>
 
       <p>
-        Restauração e edição cinematográfica de imagens.
+
+        Restauração profissional,
+        retoques premium e manipulações
+        cinematográficas.
+
       </p>
 
     </div>
 
-    <div class="card">
+    <!-- SITE -->
 
-      <div class="icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
+    <div class="service-card">
+
+      <div class="service-icon">
+
+        <i class="fas fa-code"></i>
+
       </div>
 
-      <h3>Criação de Sites</h3>
+      <h3>
+        Criação de Sites
+      </h3>
 
       <p>
-        Sites modernos premium para negócios, criadores e marcas.
+
+        Sites premium modernos,
+        rápidos e totalmente responsivos.
+
       </p>
 
     </div>
@@ -150,83 +250,183 @@
 <section id="prices">
 
   <div class="section-title">
+
     <span>PREÇOS</span>
-    <h2>Pacotes</h2>
+
+    <h2>
+      Pacotes disponíveis
+    </h2>
+
   </div>
 
   <div class="pricing-grid">
 
+    <!-- FOTO -->
+
     <div class="price-card">
 
-      <h3>Restauração de Fotos</h3>
+      <h3>
+        Restauração de Fotos
+      </h3>
 
       <div class="price-list">
 
-        <div>
+        <div onclick="addToCart('5 Fotos Restauradas',30)">
+
           <span>5 Fotos</span>
+
           <strong>R$30</strong>
+
         </div>
 
-        <div>
+        <div onclick="addToCart('10 Fotos Restauradas',45)">
+
           <span>10 Fotos</span>
+
           <strong>R$45</strong>
+
         </div>
 
-        <div>
+        <div onclick="addToCart('20 Fotos Restauradas',70)">
+
           <span>20 Fotos</span>
+
           <strong>R$70</strong>
+
         </div>
 
       </div>
 
       <div class="custom-price">
 
-        <h4>Preço Personalizado</h4>
+        <h4>
+          Preço personalizado
+        </h4>
 
-        <input type="range" min="1" max="100" value="10" id="slider">
+        <input type="range"
+        min="1"
+        max="100"
+        value="10"
+        id="slider">
 
         <p>
-          <span id="quantity">10</span> fotos =
-          <strong id="price">R$45</strong>
+
+          <span id="quantity">
+            10
+          </span>
+
+          fotos =
+          <strong id="price">
+            R$45
+          </strong>
+
         </p>
 
       </div>
 
     </div>
 
+    <!-- INSTAGRAM -->
+
     <div class="price-card">
 
-      <h3>Instagram</h3>
+      <h3>
+        Instagram
+      </h3>
 
-      <div class="plan">
-        <span>4 posts por semana</span>
-        <strong>R$350</strong>
+      <div class="plan"
+      onclick="addToCart('Instagram 4 Posts Semanais',350)">
+
+        <span>
+
+          4 posts por semana
+
+        </span>
+
+        <strong>
+          R$350
+        </strong>
+
       </div>
 
-      <div class="plan">
-        <span>Posts diários + alguns dias com 2 posts</span>
-        <strong>R$450</strong>
+      <div class="plan"
+      onclick="addToCart('Instagram Premium Diário',450)">
+
+        <span>
+
+          Posts diários + dias com 2 posts
+
+        </span>
+
+        <strong>
+          R$450
+        </strong>
+
       </div>
 
-      <div class="plan">
-        <span>10 imagens para Instagram</span>
-        <strong>R$35</strong>
+      <div class="plan"
+      onclick="addToCart('10 Artes para Instagram',35)">
+
+        <span>
+
+          10 imagens para Instagram
+
+        </span>
+
+        <strong>
+          R$35
+        </strong>
+
       </div>
 
     </div>
 
+    <!-- SITES -->
+
     <div class="price-card">
 
-      <h3>Criação de Sites</h3>
+      <h3>
+        Criação de Sites
+      </h3>
 
-      <div class="plan">
-        <span>Site completo premium</span>
-        <strong>R$100</strong>
+      <div class="plan"
+      onclick="addToCart('Site Moderno Premium',100)">
+
+        <span>
+
+          Site profissional (valor médio)
+
+        </span>
+
+        <strong>
+          R$100+</strong>
+
       </div>
 
       <div class="plan">
-        <span>Alterações futuras</span>
-        <strong>R$30</strong>
+
+        <span>
+
+          Projetos complexos possuem
+          valor maior
+
+        </span>
+
+      </div>
+
+      <div class="plan"
+      onclick="addToCart('Alteração em Site',30)">
+
+        <span>
+
+          Alterações futuras
+
+        </span>
+
+        <strong>
+          R$30
+        </strong>
+
       </div>
 
     </div>
@@ -240,41 +440,78 @@
 <section id="portfolio">
 
   <div class="section-title">
+
     <span>PORTFÓLIO</span>
-    <h2>Projetos criativos</h2>
+
+    <h2>
+
+      Projetos criativos
+
+    </h2>
+
   </div>
 
-  <div class="portfolio">
+  <div class="portfolio-grid">
+
+    <!-- SITE -->
 
     <div class="portfolio-item">
 
-      <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
 
-      <div class="portfolio-content">
-        <p>VisuAll Studio</p>
-        <h3>Design Premium</h3>
+      <div class="portfolio-overlay">
+
+        <span>Website Premium</span>
+
+        <h3>
+
+          Sites modernos para marcas
+          e empresas
+
+        </h3>
+
       </div>
 
     </div>
 
+    <!-- INSTAGRAM -->
+
     <div class="portfolio-item">
 
-      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop">
 
-      <div class="portfolio-content">
-        <p>VisuAll Studio</p>
-        <h3>Instagram Design</h3>
+      <div class="portfolio-overlay">
+
+        <span>Social Media</span>
+
+        <h3>
+
+          Designs estratégicos
+          para Instagram
+
+        </h3>
+
       </div>
 
     </div>
 
+    <!-- FOTO -->
+
     <div class="portfolio-item">
 
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop">
 
-      <div class="portfolio-content">
-        <p>VisuAll Studio</p>
-        <h3>Photo Rework</h3>
+      <div class="portfolio-overlay">
+
+        <span>Photo Reworks</span>
+
+        <h3>
+
+          Restauração e edição
+          cinematográfica
+
+        </h3>
+
       </div>
 
     </div>
@@ -283,208 +520,118 @@
 
 </section>
 
-<!-- CARRINHO -->
+<!-- SHOP -->
 
-<section class="cart-section" id="shop">
+<section id="shop">
 
   <div class="section-title">
-    <span>SERVIÇOS & PACOTES</span>
-    <h2>Escolha seu pacote</h2>
+
+    <span>PROJETOS</span>
+
+    <h2>
+
+      Escolha o que você precisa
+
+    </h2>
+
   </div>
 
-  <div class="cart-container">
+  <div class="products-grid">
 
-    <!-- PRODUTOS -->
+    <!-- SITE -->
 
-    <div class="products">
+    <div class="product-card">
 
-      <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
 
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+      <h3>
 
-        <h3>5 Fotos Restauradas</h3>
+        Criação de Sites
 
-        <p>
-          Restauração profissional de 5 fotos.
-        </p>
+      </h3>
 
-        <div class="product-price">
-          R$30
-        </div>
+      <p>
 
-        <button class="add-cart-btn"
-        onclick="addToCart('5 Fotos Restauradas',30)">
-          Adicionar
-        </button>
+        Sites premium modernos
+        totalmente personalizados.
 
-      </div>
+      </p>
 
-      <div class="product-card">
+      <div class="product-price">
 
-        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
-
-        <h3>10 Fotos Restauradas</h3>
-
-        <p>
-          Pacote premium de restauração.
-        </p>
-
-        <div class="product-price">
-          R$45
-        </div>
-
-        <button class="add-cart-btn"
-        onclick="addToCart('10 Fotos Restauradas',45)">
-          Adicionar
-        </button>
+        R$100+
 
       </div>
 
-      <div class="product-card">
+      <button onclick="addToCart('Criação de Site',100)">
 
-        <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop">
+        Adicionar ao carrinho
 
-        <h3>20 Fotos Restauradas</h3>
-
-        <p>
-          Pacote completo de restauração profissional.
-        </p>
-
-        <div class="product-price">
-          R$70
-        </div>
-
-        <button class="add-cart-btn"
-        onclick="addToCart('20 Fotos Restauradas',70)">
-          Adicionar
-        </button>
-
-      </div>
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop">
-
-        <h3>Instagram - 4 Posts</h3>
-
-        <p>
-          Gestão de Instagram com 4 posts por semana.
-        </p>
-
-        <div class="product-price">
-          R$350
-        </div>
-
-        <button class="add-cart-btn"
-        onclick="addToCart('Instagram 4 Posts',350)">
-          Adicionar
-        </button>
-
-      </div>
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop">
-
-        <h3>Instagram Premium</h3>
-
-        <p>
-          Posts diários + dias com 2 posts.
-        </p>
-
-        <div class="product-price">
-          R$450
-        </div>
-
-        <button class="add-cart-btn"
-        onclick="addToCart('Instagram Premium',450)">
-          Adicionar
-        </button>
-
-      </div>
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
-
-        <h3>10 Imagens Instagram</h3>
-
-        <p>
-          Pacote de artes profissionais para Instagram.
-        </p>
-
-        <div class="product-price">
-          R$35
-        </div>
-
-        <button class="add-cart-btn"
-        onclick="addToCart('10 Imagens Instagram',35)">
-          Adicionar
-        </button>
-
-      </div>
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
-
-        <h3>Criação de Site</h3>
-
-        <p>
-          Site moderno premium totalmente personalizado.
-        </p>
-
-        <div class="product-price">
-          R$100
-        </div>
-
-        <button class="add-cart-btn"
-        onclick="addToCart('Criação de Site',100)">
-          Adicionar
-        </button>
-
-      </div>
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop">
-
-        <h3>Alteração no Site</h3>
-
-        <p>
-          Atualizações e modificações futuras.
-        </p>
-
-        <div class="product-price">
-          R$30
-        </div>
-
-        <button class="add-cart-btn"
-        onclick="addToCart('Alteração no Site',30)">
-          Adicionar
-        </button>
-
-      </div>
+      </button>
 
     </div>
 
-    <!-- CARRINHO -->
+    <!-- INSTA -->
 
-    <div class="cart-box">
+    <div class="product-card">
 
-      <h2>Seu Carrinho</h2>
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
 
-      <div id="cart-items"></div>
+      <h3>
 
-      <div class="cart-total">
-        <span>Total:</span>
-        <span>R$<span id="cart-total">0</span></span>
+        Gestão Instagram
+
+      </h3>
+
+      <p>
+
+        Crescimento estratégico
+        e gerenciamento profissional.
+
+      </p>
+
+      <div class="product-price">
+
+        R$350
+
       </div>
 
-      <button class="checkout-btn"
-      onclick="finalizarPedido()">
+      <button onclick="addToCart('Gestão Instagram',350)">
 
-        Finalizar Pedido
+        Adicionar ao carrinho
+
+      </button>
+
+    </div>
+
+    <!-- FOTO -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+      <h3>
+
+        Restauração de Fotos
+
+      </h3>
+
+      <p>
+
+        Recuperação premium
+        de imagens antigas.
+
+      </p>
+
+      <div class="product-price">
+
+        R$30+
+
+      </div>
+
+      <button onclick="addToCart('Restauração de Fotos',30)">
+
+        Adicionar ao carrinho
 
       </button>
 
@@ -497,4 +644,5 @@
 <script src="script.js"></script>
 
 </body>
-  </html>
+
+      </html>
