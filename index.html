@@ -1,69 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>VisuAll</title>
+
+  <link rel="stylesheet" href="style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
 
-    body{
-      font-family:'Poppins',sans-serif;
-      background:#030712;
-      color:white;
-      overflow-x:hidden;
-    }
+<body>
 
-    body::before{
-      content:'';
-      position:fixed;
-      width:600px;
-      height:600px;
-      background:#2563eb33;
-      filter:blur(120px);
-      top:-200px;
-      left:-100px;
-      z-index:-1;
-    }
+<div class="particles"></div>
 
-    body::after{
-      content:'';
-      position:fixed;
-      width:500px;
-      height:500px;
-      background:#06b6d433;
-      filter:blur(120px);
-      bottom:-200px;
-      right:-100px;
-      z-index:-1;
-    }
+<header>
 
-    .particles{
-      position:fixed;
-      width:100%;
-      height:100%;
-      z-index:-2;
-      overflow:hidden;
-    }
+  <div class="logo">VisuAll</div>
 
-    .particle{
-      position:absolute;
-      width:3px;
-      height:3px;
-      background:white;
-      border-radius:50%;
-      opacity:.3;
-      animation:float 10s linear infinite;
-    }
+  <nav>
+    <a href="#services">Serviços</a>
+    <a href="#prices">Preços</a>
+    <a href="#portfolio">Portfólio</a>
+  </nav>
 
+  <a href="https://wa.me/5514981775443" class="btn">
+    Orçamento
+  </a>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      Agência Criativa Digital
+    </div>
+
+    <h1>
+      Sua marca merece
+      <span class="gradient">ser vista.</span>
+    </h1>
+
+    <p>
+      Design premium, marketing digital e restaurações profissionais para elevar sua marca.
+    </p>
+
+    <div class="buttons">
+
+      <a href="https://wa.me/5514981775443" class="btn">
+        Solicitar Projeto
+      </a>
+
+      <a href="#prices" class="btn-secondary">
+        Ver Preços
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="services">
+
+  <div class="section-title">
+    <span>SERVIÇOS</span>
+    <h2>O que fazemos</h2>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+
+      <div class="icon instagram-icon">
+        <i class="fab fa-instagram"></i>
+      </div>
+
+      <h3>Social Media</h3>
+
+      <p>
+        Posts modernos e identidade visual estratégica para redes sociais.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+      </div>
+
+      <h3>Marketing Digital</h3>
+
+      <p>
+        Estratégias inteligentes para crescimento e posicionamento online.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png">
+      </div>
+
+      <h3>Photo Reworks</h3>
+
+      <p>
+        Edições profissionais e manipulações cinematográficas.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
+      </div>
+
+      <h3>Branding</h3>
+
+      <p>
+        Construção de marcas premium e memoráveis.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="prices">
+
+  <div class="section-title">
+    <span>PREÇOS</span>
+    <h2>Pacotes</h2>
+  </div>
+
+  <div class="pricing-grid">
+
+    <div class="price-card">
+
+      <h3>Restauração de Fotos</h3>
+
+      <div class="price-list">
+
+        <div>
+          <span>5 Fotos</span>
+          <strong>R$30</strong>
+        </div>
+
+        <div>
+          <span>10 Fotos</span>
+          <strong>R$45</strong>
+        </div>
+
+        <div>
+          <span>20 Fotos</span>
+          <strong>R$70</strong>
+        </div>
+
+      </div>
+
+      <div class="custom-price">
+
+        <h4>Personalizado</h4>
+
+        <input type="range" min="1" max="100" value="10" id="slider">
+
+        <p>
+          <span id="quantity">10</span> fotos =
+          <strong id="price">R$45</strong>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="price-card">
+
+      <h3>Gerenciamento Instagram</h3>
+
+      <div class="plan">
+        <span>4 posts por semana</span>
+        <strong>R$350</strong>
+      </div>
+
+      <div class="plan">
+        <span>Post todos os dias + alguns dias com 2 posts</span>
+        <strong>R$450</strong>
+      </div>
+
+    </div>
+
+    <div class="price-card">
+
+      <h3>Pacote de Imagens</h3>
+
+      <div class="plan">
+        <span>10 imagens para Instagram</span>
+        <strong>R$35</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="portfolio">
+
+  <div class="section-title">
+    <span>PORTFÓLIO</span>
+    <h2>Projetos criativos</h2>
+  </div>
+
+  <div class="portfolio">
+
+    <div class="portfolio-item">
+      <div class="portfolio-content">
+        <p>VisuAll Studio</p>
+        <h3>Design Premium</h3>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="portfolio-content">
+        <p>VisuAll Studio</p>
+        <h3>Instagram Design</h3>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="portfolio-content">
+        <p>VisuAll Studio</p>
+        <h3>Photo Rework</h3>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
     @keyframes float{
       0%{
         transform:translateY(100vh);
